@@ -1,3 +1,13 @@
+import subprocess
+import sys
+
+try: 
+    import selenium
+    print("Selenium já está instalado")
+except ImportError:
+    print("Selenium não está instalado. Instalando...")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "selenium"])
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -49,5 +59,6 @@ with zipfile.ZipFile(zip_filename, "w", zipfile.ZIP_DEFLATED) as zip:
             print(f"Arquivo {filename} adicionado ao zip com sucesso")
 
 print(f"Arquivo {zip_filename} criado com sucesso")
+
 
 driver.quit()
