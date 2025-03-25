@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 import os
 import requests
+import zipfile
 
 
 options = webdriver.ChromeOptions()
@@ -37,5 +38,16 @@ for link in pdf_links:
         print(f"Arquivo {filename} baixado com sucesso")
     else:
         print(f"Erro ao baixar {link}: {reponse.status_code}")   
+
+zip_filename = os.path.join(os.path.dirname(os.path.abspath(__file__)), "anexos.zip")
+
+with zipfile.ZipFile(zip_filename, "w", zipfile.ZIP_DEFLATED) as zip:
+    for pdf in pdf_links:
+        filename = os.path.join(os.path.dirname(os.path.abspath(__file__)), pdf.split("/")[-1])
+        if os.path.exists(filename):
+            zip.write(filename, os.path.basename(filename))
+            print(f"Arquivo {filename} adicionado ao zip com sucesso")
+
+print(f"Arquivo {zip_filename} criado com sucesso")
 
 driver.quit()
