@@ -8,6 +8,13 @@ except ImportError:
     print("Selenium não está instalado. Instalando...")
     subprocess.check_call([sys.executable, "-m", "pip", "install", "selenium"])
 
+try:
+    import webdriver_manager
+    print("WebDriverManager já está instalado")
+except ImportError:
+    print("WebDriverManager não está instalado. Instalando...")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "webdriver-manager"])
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
