@@ -1,19 +1,11 @@
-import subprocess
 import sys
+import os
 
-try: 
-    import selenium
-    print("Selenium já está instalado")
-except ImportError:
-    print("Selenium não está instalado. Instalando...")
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "selenium"])
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from utils import instalar_pacotes
 
-try:
-    import webdriver_manager
-    print("WebDriverManager já está instalado")
-except ImportError:
-    print("WebDriverManager não está instalado. Instalando...")
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "webdriver-manager"])
+instalar_pacotes("selenium")
+instalar_pacotes("webdriver_manager")
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
