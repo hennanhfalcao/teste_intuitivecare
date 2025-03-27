@@ -16,7 +16,7 @@ CREATE TABLE operadoras_ativas (
     nome_fantasia TEXT,
     modalidade TEXT,
     logradouro TEXT,
-    numero VARCHAR(10),
+    numero VARCHAR(20),
     complemento TEXT,
     bairro TEXT,
     cidade TEXT,
