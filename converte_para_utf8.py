@@ -1,6 +1,14 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from utils import instalar_pacotes
+
+instalar_pacotes("chardet")
+
+
 import csv
 import chardet
-import os
 
 def converter_csv_para_utf8(pasta_entrada, pasta_saida):
     if not os.path.exists(pasta_saida):

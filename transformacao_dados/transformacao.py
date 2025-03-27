@@ -8,7 +8,6 @@ instalar_pacotes("tabula-py")
 instalar_pacotes("pandas")
 instalar_pacotes("jpype1")
 
-import os
 from tabula import read_pdf
 import pandas as pd
 import zipfile
