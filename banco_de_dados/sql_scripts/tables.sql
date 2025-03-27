@@ -23,7 +23,7 @@ CREATE TABLE operadoras_ativas (
     uf CHAR(2),
     cep VARCHAR(10),
     ddd VARCHAR(2),
-    telefone VARCHAR(12),
+    telefone VARCHAR(20),
     fax VARCHAR(12),
     endereco_eletronico TEXT,
     representante TEXT,
