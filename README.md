@@ -1,6 +1,6 @@
 # Instruções de preparação do ambiente
 
-Antes de qualquer coisa, crie um ambiente virtual com o comando `python -m venv .venv` no diretório raiz, instale todas as dependências necessárias para execução dos testes com o comando `pip install -r requirements.txt` estando dentro do diretório principal `teste_intuitivecare`.
+Antes de qualquer coisa, crie um ambiente virtual com o comando `python -m venv .venv` no diretório raiz, ative-a com o comando `.venv/Scripts/activate`, instale todas as dependências necessárias para execução dos testes com o comando `pip install -r requirements.txt` estando dentro do diretório principal `teste_intuitivecare`.  
 
 # Instruções para os testes de Web Scraping e Transformação de Dados
 
