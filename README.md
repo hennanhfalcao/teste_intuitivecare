@@ -1,4 +1,4 @@
-#Instruções de preparação do ambiente
+# Instruções de preparação do ambiente
 
 Antes de qualquer coisa, instale todas as dependências necessárias para execução dos testes com o comando `pip install -r requirements.txt` estando dentro do diretório principal `teste_intuitivecare`.
 
