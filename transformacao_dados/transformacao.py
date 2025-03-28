@@ -1,13 +1,4 @@
-import sys
 import os
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from utils import instalar_pacotes
-
-instalar_pacotes("tabula-py")
-instalar_pacotes("pandas")
-instalar_pacotes("jpype1")
-
 from tabula import read_pdf
 import pandas as pd
 import zipfile
