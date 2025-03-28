@@ -18,6 +18,7 @@ csv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tabela_comp
 zip_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Teste_Hennan_Heim_Falcao.zip")
 
 tabelas_extraidas = read_pdf(pdf_path, pages="3-181", multiple_tables=True, lattice=True)
+print(f"{len(tabelas_extraidas)} tabelas extraídas")
 
 df = pd.DataFrame
 
@@ -34,5 +35,9 @@ df_final = df_final.where(pd.notna(df_final), None)
 
 df_final.to_csv(csv_path, index=False, sep=";", encoding="utf-8-sig", na_rep="NULL")
 
+print(f"Arquivo {csv_path} criado com sucesso")
+
 with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
     zipf.write(csv_path, os.path.basename(csv_path))
+
+print(f"Arquivo {zip_path} criado com sucesso")
