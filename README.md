@@ -1,3 +1,7 @@
+# Instruções para os testes de Web Scraping e Transformação de Dados
+
+Antes de executar o teste de transformação de dados, garanta que o teste de Web Scraping tenha sido executado e o arquivo Anexo I tenha sido gerado.
+
 # Instruções para o Teste de Banco de Dados
 
 Este guia descreve o processo para configurar e executar o teste de importação de dados e análise no PostgreSQL.
