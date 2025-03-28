@@ -1,6 +1,6 @@
 # Instruções para os testes de Web Scraping e Transformação de Dados
 
-Antes de executar o teste de transformação de dados, garanta que o teste de Web Scraping tenha sido executado e o arquivo Anexo I tenha sido gerado.
+Antes de executar o teste de transformação de dados(`transformacao.py`), garanta que o teste de Web Scraping, ou seja, o script `scraping.py` tenha sido executado e o arquivo Anexo I tenha sido gerado.
 
 # Instruções para o Teste de Banco de Dados
 
