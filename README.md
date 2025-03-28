@@ -1,3 +1,7 @@
+#Instruções de preparação do ambiente
+
+Antes de qualquer coisa, instale todas as dependências necessárias para execução dos testes com o comando `pip install -r requirements.txt` estando dentro do diretório principal `teste_intuitivecare`.
+
 # Instruções para os testes de Web Scraping e Transformação de Dados
 
 Antes de executar o teste de transformação de dados(`transformacao.py`), garanta que o teste de Web Scraping, ou seja, o script `scraping.py` tenha sido executado e o arquivo Anexo I tenha sido gerado.
@@ -9,7 +13,7 @@ Este guia descreve o processo para configurar e executar o teste de importação
 ## Passo 1: Verificar os Arquivos
 
 Antes de executar qualquer script SQL, verifique se todos os arquivos necessários estão no diretório `teste_intuitivecare/banco_de_dados` com os **nomes exatos** que estão no script de importação.  
-
+O banco de dados utilizado foi o PostgreSQL
 ## Passo 2: Converter os Arquivos CSV para UTF-8
 
 1. Navegue até o diretório `teste_intuitivecare`.
@@ -50,4 +54,9 @@ Antes de executar qualquer script SQL, verifique se todos os arquivos necessári
 
      ```bash
      psql -U {usuario_do_banco} -d {banco_de_dados} -f queries_analiticas.sql
-     ```
+     ```  
+#Instruções para o Teste de API  
+O servidor foi desenvolvido utilizando FastAPI.
+1.Para rodar o servidor, execute o comando `uvicorn server:app --reload` dentro do diretório `teste_intuitivecare/teste_api`.  
+2. A coleção do POSTMAN não foi salva com as responses para fins de otimização, para acessar as responses, importe a coleção no próprio POSTMAN e execute as requests.  
+
