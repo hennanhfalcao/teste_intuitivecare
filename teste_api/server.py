@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, HTTPException, Query
 import pandas as pd
 
 app = FastAPI()
@@ -10,10 +10,23 @@ def carregar_dados():
 
 @app.get("/operadoras/")
 def listar_operadoras(
-    nome: str = Query(None, min_length=3, title="Nome da operadora"),
-    limit: int = Query(10, gt=0, le=100, title="Número de registros por página"),
-    offset: int = Query(0, ge=0, title="Número do registro inicial"),
+    nome: str = Query(None, title="Nome da operadora"),
+    limit: int = Query(10, title="Número de registros por página"),
+    offset: int = Query(0, title="Número do registro inicial"),
     ):
+    
+    if nome is not None and len(nome) < 3:
+        raise HTTPException(status_code=422, detail="O parâmetro 'nome' deve ter pelo menos 3 caracteres.")
+
+    if limit < 0:
+        raise HTTPException(status_code=422, detail="O parâmetro 'limit' não pode ser negativo.")
+
+    if limit > 50:
+        raise HTTPException(status_code=422, detail="O parâmetro 'limit' não pode ser maior que 50.")
+    
+    if offset < 0:
+        raise HTTPException(status_code=422, detail="O parâmetro 'offset' não pode ser negativo.")
+
 
     df = carregar_dados()
 
