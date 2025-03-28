@@ -55,7 +55,7 @@ O banco de dados utilizado foi o PostgreSQL
      ```bash
      psql -U {usuario_do_banco} -d {banco_de_dados} -f queries_analiticas.sql
      ```  
-#Instruções para o Teste de API  
+# Instruções para o Teste de API  
 O servidor foi desenvolvido utilizando FastAPI.
 1.Para rodar o servidor, execute o comando `uvicorn server:app --reload` dentro do diretório `teste_intuitivecare/teste_api`.  
 2. A coleção do POSTMAN não foi salva com as responses para fins de otimização, para acessar as responses, importe a coleção no próprio POSTMAN e execute as requests.  
