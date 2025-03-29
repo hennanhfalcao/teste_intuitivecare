@@ -32,9 +32,7 @@ CREATE TABLE ans.demonstracoes_contabeis (
     cd_conta_contabil VARCHAR(100),
     descricao TEXT,
     vl_saldo_inicial NUMERIC(15,2),
-    vl_saldo_final NUMERIC(15,2),
-    trimestre SMALLINT,
-    ano SMALLINT
+    vl_saldo_final NUMERIC(15,2)
 );
 
 ALTER TABLE ans.demonstracoes_contabeis SET (fillfactor = 80);
