@@ -29,14 +29,22 @@ O banco de dados utilizado foi o PostgreSQL
 ## Passo 3: Criação das Tabelas no Banco de Dados
 
 1. Navegue até o diretório `teste_intuitivecare/banco_de_dados/sql_scripts/`.
-2. Execute o script de criação das tabelas `tables.sql` para configurar o esquema do banco de dados.
+2. Execute o scrit de criação do banco de dados `create_database.sql`.
+     ```bash
+     psql -U {usuario_do_banco} -f create_database.sql
+     ```
+3. Conecte-se ao banco de dados por meio do comando
+     ```bash
+     psql -U {usuario_do_banco} -d teste_intuitive_care_db.sql
+     ```
+4. Execute o script de criação das tabelas `tables.sql` para configurar o esquema do banco de dados.
    - **Comando de execução:**
 
      ```bash
-     psql -U {usuario_do_banco} -d {banco_de_dados} -f tables.sql
+     psql -U {usuario_do_banco} -d teste_intuitive_care_db -f schemas_and_tables.sql
      ```
 
-   Lembre-se de substituir `{usuario_do_banco}` e `{banco_de_dados}` pelos valores correspondentes.
+   Lembre-se de substituir `{usuario_do_banco}` pelo valor correspondente.
 
 ## Passo 4: Importação de Dados
 
@@ -44,16 +52,16 @@ O banco de dados utilizado foi o PostgreSQL
    - **Comando de execução:**
 
      ```bash
-     psql -U {usuario_do_banco} -d {banco_de_dados} -f import_data.sql
+     psql -U {usuario_do_banco} -d teste_intuitive_care_db -f import_data.sql
      ```
 
 ## Passo 5: Execução das Queries Analíticas
 
-1. Após a importação dos dados, execute o script `queries_analiticas.sql` para gerar as análises solicitadas.
+1. Após a importação dos dados, execute o script `queries.sql` para gerar as análises solicitadas.
    - **Comando de execução:**
 
      ```bash
-     psql -U {usuario_do_banco} -d {banco_de_dados} -f queries_analiticas.sql
+     psql -U {usuario_do_banco} -d teste_intuitive_care_db -f queries.sql
      ```  
 # Instruções para o Teste de API  
 O servidor foi desenvolvido utilizando FastAPI.  
