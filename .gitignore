@@ -1,0 +1,62 @@
+# Backend Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.env
+*.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+*.pot
+*.db
+*.sqlite
+*.pid
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Frontend
+teste_api/frontend/node_modules/
+teste_api/frontend/dist/
+teste_api/frontend/.env
+teste_api/frontend/.env.local
+teste_api/frontend/.env.*.local
+teste_api/frontend/npm-debug.log*
+teste_api/frontend/yarn-debug.log*
+teste_api/frontend/yarn-error.log*
+
+# Dados/arquivos pesados
+banco_de_dados/*.csv
+transformacao_dados/
+web_scraping/
+
+# Node.js
+teste_api/node_modules/
+teste_api/package-lock.json
+
+# Editor/IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store

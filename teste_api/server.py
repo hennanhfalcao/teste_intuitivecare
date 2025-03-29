@@ -1,8 +1,17 @@
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
+
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 CSV_PATH = '../banco_de_dados/Relatorio_cadopconv_utf8.csv'
 
 def carregar_dados():
