@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS ans.demonstracoes_contabeis;
 DROP TABLE IF EXISTS ans.operadoras_ativas;
 
 CREATE TABLE ans.operadoras_ativas (
-    reg_ans INT PRIMARY KEY,
+    reg_ans INT,
     cnpj VARCHAR(20),
     razao_social TEXT,
     nome_fantasia TEXT,
@@ -28,7 +28,7 @@ CREATE TABLE ans.operadoras_ativas (
 
 CREATE TABLE ans.demonstracoes_contabeis (
     data DATE,
-    reg_ans INT REFERENCES ans.operadoras_ativas(reg_ans),
+    reg_ans INT,
     cd_conta_contabil VARCHAR(100),
     descricao TEXT,
     vl_saldo_inicial NUMERIC(15,2),
