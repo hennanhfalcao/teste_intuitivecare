@@ -57,6 +57,9 @@ O banco de dados utilizado foi o PostgreSQL
      ```  
 # Instruções para o Teste de API  
 O servidor foi desenvolvido utilizando FastAPI.  
-1.Para rodar o servidor, execute o comando `uvicorn server:app --reload` dentro do diretório `teste_intuitivecare/teste_api`.  
+1.Para rodar o servidor, execute o comando `uvicorn server:app --reload` dentro do diretório `teste_intuitivecare/teste_api`. 
 2. A coleção do POSTMAN não foi salva com as responses para fins de otimização, para acessar as responses, importe a coleção no próprio POSTMAN e execute as requests.  
-
+3. Garantindo que o backend está rodando, vá para o diretório `teste_intuitivecare/teste_api/frontend`  
+4. Instale todas as dependências com o comando `npm install`  
+5. Rode o servidor com o comando `npm run serve`  
+6. Acesse os servidores nas rotas indicadas nos terminais.
